@@ -63,7 +63,7 @@ void SetupWifi(void);
  *        is then sent to the Blynk server and updated in the app.
  * @note Virtual pins from 50-89 are used to send data back.
  */
-void SerialInputToBlynkApp(void)
+void SerialInputToBlynkApp(void);
 
 /**
  * @brief Test8266_IF is used to debug the interface between the TM4C.
@@ -159,6 +159,7 @@ void SetupWifi(void) {
             ++bufpos;
             delay(10);
         }
+    }
 
     // Copy over authentication token, ssid, password.
     // Note: the string is terminated with a dangling comma.
